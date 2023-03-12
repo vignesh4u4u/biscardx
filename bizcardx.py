@@ -15,6 +15,7 @@ import sqlite3
 from io import BytesIO
 
 st.title("Easy OCR-BIZ Card X")
+st.subheader("An App to extract text from your bussiness card")
 st.markdown("## Using `easyocr`,`streamlit`")
 #st.info('This is a purely informational message', icon="ℹ️")
 
@@ -66,7 +67,8 @@ def insertBLOB(filename,im_data,extracted_text):
 
 
 with tab1:
-    image=st.file_uploader(label="Stuborn on vision Flexible on details",type=['png','jpg','jpeg'])
+    st.subheader('Stuborn on Vision! Flexible on Details')
+    image=st.file_uploader(label="Please Upload Files less than 1mb",type=['png','jpg','jpeg'])
     
     
     reader=load_model()
