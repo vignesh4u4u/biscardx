@@ -1,0 +1,6 @@
+db-sqlite3
+pip==23.0.1
+streamlit
+easyocr
+Pillow
+numpy
