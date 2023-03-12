@@ -35,7 +35,7 @@ def draw_boxes(image,bounds,color='red',width=2):
 @st.cache_data
 def insertBLOB(filename,im_data,extracted_text):
     try:
-        sqliteConnection = sqlite3.connect(r"\Users\THIS PC\OneDrive\Desktop\bizcardx\bizcardx_db.db")
+        sqliteConnection = sqlite3.connect("bizcardx_db.db")
         cursor = sqliteConnection.cursor()
         #st.write("Connected to SQLite")
         sqlite_insert_blob_query = """ INSERT INTO biscardx
@@ -127,7 +127,7 @@ with tab2:
     with st.spinner("Loading..."):
         def readBlobData(empIdd):
             try:
-                sqliteConnection = sqlite3.connect(r"\Users\THIS PC\OneDrive\Desktop\bizcardx\bizcardx_db.db")
+                sqliteConnection = sqlite3.connect("bizcardx_db.db")
                 cursor = sqliteConnection.cursor()
                 #st.write("Connected to SQLite")
 
@@ -156,7 +156,7 @@ with tab2:
                     
         def del_dat(saved_name):
             try:
-                sqliteConnection = sqlite3.connect(r"\Users\THIS PC\OneDrive\Desktop\bizcardx\bizcardx_db.db")
+                sqliteConnection = sqlite3.connect("bizcardx_db.db")
                 cursor = sqliteConnection.cursor()
                 #st.write("Connected to SQLite")
                 
